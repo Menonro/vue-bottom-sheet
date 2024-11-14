@@ -40,9 +40,7 @@
             v-model="canSwipe"
             checked
           />
-          <label class="form-check-label" for="canSwipe"
-          >Enable swipe to close</label
-          >
+          <label class="form-check-label" for="canSwipe">Enable swipe to close</label>
         </div>
       </div>
       <div class="col-md-4 col-12">
@@ -76,6 +74,7 @@
     </div>
     <button class="btn btn-primary" type="button" @click="open">Open bottom sheet</button>
     <vue-bottom-sheet
+      v-if="overlay"
       :overlay-click-close="clickToClose"
       :transition-duration="0.5"
       :max-width="maxWidth"
